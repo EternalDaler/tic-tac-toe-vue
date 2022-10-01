@@ -112,7 +112,7 @@ export default {
       if(this.count === 9)
       {
         let myWin = this.checkWin(1)
-        let oppWin = this.checkWin(2)
+        // let oppWin = this.checkWin(2)
         if(myWin){
           this.gameover = true
           this.game_statement = 'Победа'
