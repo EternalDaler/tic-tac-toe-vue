@@ -111,6 +111,13 @@ export default {
 
       if(this.count === 9)
       {
+        let myWin = this.checkWin(1)
+        let oppWin = this.checkWin(2)
+        if(myWin){
+          this.gameover = true
+          this.game_statement = 'Победа'
+          return;
+        }
         this.gameover = true
         this.game_statement = 'Ничья'
         return;
@@ -151,7 +158,6 @@ export default {
       this.grid[n] = 1
       let checkWin = this.checkWin(1)
       this.grid[n] = 0
-      console.log(checkWin)
       return checkWin
     },
 
